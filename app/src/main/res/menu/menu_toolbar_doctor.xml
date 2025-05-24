@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_logout"
+        android:title="Déconnexion"
+        android:icon="@drawable/ic_logout"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_advice_client"
+        android:title="Conseils Client"
+        android:icon="@drawable/ic_advice"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,5 @@
+<!-- res/drawable/avatar_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" /> <!-- Color of the background (if needed) -->
+    <corners android:radius="48dp" />  <!-- Rounded corners with a specific dp value -->
+</shape>

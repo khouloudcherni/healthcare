@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_retour"
+        android:title="Conseils"
+        android:icon="@drawable/ic_avatar"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="Déconnexion"
+        android:icon="@drawable/ic_logout"
+        app:showAsAction="always" />
+</menu>

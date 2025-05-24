@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+     <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:background="#3F51B5">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health Advice"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp" />
+
+            <LinearLayout
+                android:id="@+id/rightButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/btnPersonalize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Personalise"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#FFFFFF"
+                    android:textColor="#3F51B5"
+                    android:fontFamily="sans-serif-medium"
+                    android:elevation="4dp"
+                    android:paddingHorizontal="16dp" />
+
+                <Button
+                    android:id="@+id/btnDoctorAdvice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Doctor Advice"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#FFFFFF"
+                    android:textColor="#3F51B5"
+                    android:fontFamily="sans-serif-medium"
+                    android:elevation="4dp"
+                    android:paddingHorizontal="16dp"
+                    android:visibility="gone"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="14dp"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgAdvice3"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sleep_image"
+                    android:contentDescription="Sleep Well Image" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@id/imgAdvice3"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal"
+                    android:background="#AAFFFFFF"
+                    android:padding="8dp"
+                    android:elevation="10dp">
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_below="@id/imgAdvice3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#222"
+                        android:paddingTop="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="to your health advicer"
+                        android:textSize="16sp"
+                        android:textColor="#555"
+                        android:paddingTop="6dp"
+                        android:lineSpacingExtra="5dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 1 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="14dp"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgAdvice"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sports_image"
+                    android:contentDescription="Health Image"
+                    android:transitionName="advice_image" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_below="@id/imgAdvice">
+
+                    <TextView
+                        android:id="@+id/txtAdviceTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Stay Active!"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#222"
+                        android:paddingTop="8dp" />
+
+                    <TextView
+                        android:id="@+id/txtAdviceDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Practice regular sports, eat balanced meals, drink enough water, and rest well every day."
+                        android:textSize="16sp"
+                        android:textColor="#555"
+                        android:paddingTop="6dp"
+                        android:lineSpacingExtra="5dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 2 -->
+        <!-- CardView 2 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="14dp"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgAdvice2"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/healthy_food"
+                    android:contentDescription="Healthy Food Image"
+                    android:layout_alignParentTop="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_below="@id/imgAdvice2">
+
+                    <TextView
+                        android:id="@+id/txtAdviceTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Eat Healthy"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#222"
+                        android:paddingTop="8dp" />
+
+                    <TextView
+                        android:id="@+id/txtAdviceDetails2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Include fruits, vegetables, whole grains, and lean proteins in your meals."
+                        android:textSize="16sp"
+                        android:textColor="#555"
+                        android:paddingTop="6dp"
+                        android:lineSpacingExtra="5dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 3 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="14dp"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgAdvice3"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sleep_image"
+                    android:contentDescription="Sleep Well Image" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@id/imgAdvice3"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal"
+                    android:background="#AAFFFFFF"
+                    android:padding="8dp"
+                    android:elevation="10dp">
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_below="@id/imgAdvice3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sleep Well"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#222"
+                        android:paddingTop="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ensure at least 7–8 hours of sleep daily to recharge your body."
+                        android:textSize="16sp"
+                        android:textColor="#555"
+                        android:paddingTop="6dp"
+                        android:lineSpacingExtra="5dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 4 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="14dp"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgAdvice4"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/water_glass"
+                    android:contentDescription="Hydration Image" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@id/imgAdvice4"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal"
+                    android:background="#AAFFFFFF"
+                    android:padding="8dp"
+                    android:elevation="10dp">
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_below="@id/imgAdvice4">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Stay Hydrated"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#222"
+                        android:paddingTop="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Drink at least 8 glasses of water per day to maintain hydration."
+                        android:textSize="16sp"
+                        android:textColor="#555"
+                        android:paddingTop="6dp"
+                        android:lineSpacingExtra="5dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 5 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="14dp"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgAdvice5"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mental_health"
+                    android:contentDescription="Mental Health Image" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@id/imgAdvice5"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal"
+                    android:background="#AAFFFFFF"
+                    android:padding="8dp"
+                    android:elevation="10dp">
+
+ </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_below="@id/imgAdvice5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Take Mental Breaks"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#222"
+                        android:paddingTop="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Practice mindfulness or meditation to reduce stress and boost focus."
+                        android:textSize="16sp"
+                        android:textColor="#555"
+                        android:paddingTop="6dp"
+                        android:lineSpacingExtra="5dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
